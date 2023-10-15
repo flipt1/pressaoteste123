@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Display</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Submitted Data</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .data}}
+                <tr>
+                    <td>{{.full_name}}</td>
+                    <td>{{.email}}</td>
+                    <td>{{.cpf}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+        <br>
+        <a href="/" class="btn btn-primary">Back to Form</a>
+    </div>
+</body>
+</html>
